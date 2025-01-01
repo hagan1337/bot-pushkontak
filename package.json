@@ -1,0 +1,34 @@
+{
+  "name": "bot-pushkontak",
+  "version": "1.0.0",
+  "description": "Simpel Bot WhatsApp dengan library Baileys yang memudahkan kamu melakukan Push Kontak.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Rifan Davinci",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rifandavinci/bot-pushkontak.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rifandavinci/bot-pushkontak/issues"
+  },
+  "homepage": "https://github.com/rifandavinci/bot-pushkontak#readme",
+  "dependencies": {
+    "@hapi/boom": "^10.0.1",
+    "@whiskeysockets/baileys": "^6.5.0",
+    "chalk": "^4.1.2",
+    "moment-timezone": "^0.5.43",
+    "node-cache": "^5.1.2",
+    "pino": "^8.15.0",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "keywords": [
+    "whatsapp-bot",
+    "push-kontak",
+    "baileys",
+    "bot-wa"
+  ]
+}
