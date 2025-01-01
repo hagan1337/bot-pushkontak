@@ -1,20 +1,17 @@
 # 🤖 Bot Push Kontak WhatsApp
 
-Simpel Bot WhatsApp dengan library [Baileys](https://github.com/WhiskeySockets/Baileys). yang memudahkan kamu melakukan Push Kontak.  
+Simpel Bot WhatsApp dengan library [Baileys](https://github.com/WhiskeySockets/Baileys) yang memudahkan kamu melakukan Push Kontak dan Save Kontak.  
 
 ## 🚀 Fitur
 - Menu lebih simpel
 - Push kontak ke member grup
+- Save kontak otomatis (.vcf)
 - Fitur Filter Nomor
 - Delay random/tetap
 - Mode public/self
 - AI Chat (ChatGPT)
 - Support Multi Device
 - 100% Gratis
-
-
-
-
 
 ## 📋 Daftar Command
 
@@ -32,14 +29,22 @@ Simpel Bot WhatsApp dengan library [Baileys](https://github.com/WhiskeySockets/B
 .pushkontak -filter <teks>|<idgrup> # Push dengan filter ke grup tertentu
 ```
 
+### 📱 Save Kontak
+```bash
+.savekontak                    # Save member grup saat ini (nama grup)
+.savekontak <nama>             # Save member dengan nama custom
+.savekontak <idgrup>           # Save member grup tertentu (nama grup)
+.savekontak <nama>|<idgrup>    # Save member dengan nama custom + grup tertentu
+```
+
 ### ⚙️ Pengaturan & Info
 ```bash
+.menu          # Tampilkan menu utama
 .listidgc      # Lihat daftar ID grup
 .clearfilter   # Hapus filter nomor
 .setmode       # Ubah mode bot (public/self)
 .ai            # Tanya AI
 .help          # Panduan bot
-.menu          # Tampilkan menu utama
 ```
 
 ## 🛠️ Instalasi
@@ -97,6 +102,25 @@ npm start
 .pushkontak -filter Pesan|idgrup
 ```
 
+### Save Kontak
+```bash
+# Save member grup saat ini
+.savekontak
+# Hasil: Grup 1, Grup 2, dst
+
+# Save dengan nama custom
+.savekontak Rifan
+# Hasil: Rifan 1, Rifan 2, dst
+
+# Save member grup lain (dengan ID)
+.savekontak 1234567890@g.us
+# Hasil: NamaGrup 1, NamaGrup 2, dst
+
+# Save grup lain dengan nama custom + ID
+.savekontak Rifan|1234567890@g.us
+# Hasil: Rifan 1, Rifan 2, dst
+```
+
 ### Mode Bot
 ```bash
 # Mode self (hanya owner)
@@ -112,11 +136,12 @@ npm start
 3. Rate limit: max 100 pesan/menit
 4. Filter akan tersimpan sampai di clear manual
 5. Mode public hanya untuk fitur AI
+6. File kontak (.vcf) bisa langsung diimport
+7. Nama kontak otomatis berurutan dengan nomor
 
 ## 🔗 Links
 - Channel Update: https://bit.ly/m/rifandavinci
 - Author: [Rifan Davinci](https://github.com/rifandavinci)
-
 
 ## 📄 License
 [MIT License](LICENSE)
