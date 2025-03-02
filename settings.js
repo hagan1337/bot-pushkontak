@@ -1,5 +1,5 @@
 const settings = {
-    owner: ['6285191985603'], 
+    owner: ['6285951145444'], 
     mode: 'self',
     
     mess: {
